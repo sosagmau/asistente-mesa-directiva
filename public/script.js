@@ -66,7 +66,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
     if (response.ok) {
       alert(data.message); // Inicio de sesión exitoso
       // Redirigir al usuario o realizar otras acciones
-      window.location.href = 'file:///C:/Users/Maurice/ProyectoAV/asistente-mesa-directiva/public/dashboard.html'; // Cambia '/dashboard' por la ruta deseada
+      window.location.href = 'public/dashboard.html'; // Cambia '/dashboard' por la ruta deseada
     } else {
       alert(data.message); // Mostrar mensaje de error
     }
