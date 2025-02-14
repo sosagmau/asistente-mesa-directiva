@@ -1,0 +1,30 @@
+{
+  "name": "asistente-mesa-directiva",
+  "version": "1.0.0",
+  "description": "Asistente virtual para la organización de una mesa directiva",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sosagmau/asistente-mesa-directiva.git"
+  },
+  "keywords": [
+    "asistente",
+    "mesa directiva",
+    "organización"
+  ],
+  "author": "Mauricio DeepSeek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sosagmau/asistente-mesa-directiva/issues"
+  },
+  "homepage": "https://github.com/sosagmau/asistente-mesa-directiva#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
+  }
+}

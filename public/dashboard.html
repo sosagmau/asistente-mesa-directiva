@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Asistente Mesa Directiva</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <h1>Asistente</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active" data-section="overview"><i class="fas fa-home"></i> Resumen</a></li>
+          <li><a href="#" data-section="meetings"><i class="fas fa-calendar-alt"></i> Reuniones</a></li>
+          <li><a href="#" data-section="tasks"><i class="fas fa-tasks"></i> Tareas</a></li>
+          <li><a href="#" data-section="events"><i class="fas fa-calendar-check"></i> Eventos</a></li>
+          <li><a href="#" data-section="documents"><i class="fas fa-folder"></i> Archivos</a></li>
+          <li><a href="#" data-section="chatbot"><i class="fas fa-comment-dots"></i> Chatbot</a></li>
+          <li><a href="#" data-section="profile"><i class="fas fa-user"></i> Perfil</a></li>
+        </ul>
+      </nav>
+      <div class="logout">
+        <button id="logout-btn"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Notificaciones -->
+      <div class="notification-icon">
+        <i class="fas fa-bell"></i>
+        <span class="notification-badge">1</span>
+      </div>
+
+      <!-- Sección de Resumen -->
+      <section id="overview" class="content-section active">
+        <h2>Resumen</h2>
+        <div class="widgets">
+          <div class="widget" data-section="meetings">
+            <h3>Próximas Reuniones</h3>
+            <ul>
+              <li>Reunión Mensual - 25/10/2023</li>
+              <li>Fiesta Vecinal - 30/10/2023</li>
+            </ul>
+          </div>
+          <div class="widget" data-section="tasks">
+            <h3>Tareas Pendientes</h3>
+            <ul>
+              <li>Organizar Reunión - En progreso</li>
+              <li>Preparar Informe - Pendiente</li>
+            </ul>
+          </div>
+          <div class="widget" data-section="events">
+            <h3>Eventos Próximos</h3>
+            <ul>
+              <li>Fiesta Vecinal - 30/10/2023</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Reuniones -->
+      <section id="meetings" class="content-section">
+        <h2>Reuniones</h2>
+        <button id="add-meeting-btn"><i class="fas fa-plus"></i> Agregar Reunión</button>
+        <div class="meeting-list">
+          <div class="meeting-card">
+            <h3>Reunión Mensual</h3>
+            <p>Fecha: 25/10/2023</p>
+            <p>Lugar: Salón Comunitario</p>
+            <button class="edit-btn"><i class="fas fa-edit"></i> Editar</button>
+          </div>
+          <div class="meeting-card">
+            <h3>Fiesta Vecinal</h3>
+            <p>Fecha: 30/10/2023</p>
+            <p>Lugar: Parque Central</p>
+            <button class="edit-btn"><i class="fas fa-edit"></i> Editar</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Tareas -->
+      <section id="tasks" class="content-section">
+        <h2>Tareas</h2>
+        <button id="add-task-btn"><i class="fas fa-plus"></i> Agregar Tarea</button>
+        <div class="task-list">
+          <div class="task-card">
+            <h3>Organizar Reunión</h3>
+            <p>Asignado a: Maurice</p>
+            <p>Estado: En progreso</p>
+            <button class="edit-btn"><i class="fas fa-edit"></i> Editar</button>
+          </div>
+          <div class="task-card">
+            <h3>Preparar Informe</h3>
+            <p>Asignado a: Juan</p>
+            <p>Estado: Pendiente</p>
+            <button class="edit-btn"><i class="fas fa-edit"></i> Editar</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Eventos -->
+      <section id="events" class="content-section">
+        <h2>Eventos</h2>
+        <button id="add-event-btn"><i class="fas fa-plus"></i> Agregar Evento</button>
+        <div class="event-list">
+          <div class="event-card">
+            <h3>Fiesta Vecinal</h3>
+            <p>Fecha: 30/10/2023</p>
+            <p>Lugar: Parque Central</p>
+            <button class="edit-btn"><i class="fas fa-edit"></i> Editar</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Archivos -->
+      <section id="documents" class="content-section">
+        <h2>Archivos</h2>
+        <button id="upload-file-btn"><i class="fas fa-upload"></i> Cargar Archivo</button>
+        <div class="document-list">
+          <div class="document-card">
+            <h3>Acta de Reunión</h3>
+            <p>Subido el: 20/10/2023</p>
+            <button class="download-btn"><i class="fas fa-download"></i> Descargar</button>
+          </div>
+          <div class="document-card">
+            <h3>Presupuesto Anual</h3>
+            <p>Subido el: 15/10/2023</p>
+            <button class="download-btn"><i class="fas fa-download"></i> Descargar</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Chatbot -->
+      <section id="chatbot" class="content-section">
+        <h2>Chatbot</h2>
+        <div class="chat-window">
+          <div class="messages">
+            <div class="message">
+              <p><strong>Maurice:</strong> Hola, ¿cómo va todo?</p>
+            </div>
+            <div class="message">
+              <p><strong>Juan:</strong> Todo bien, ¿y tú?</p>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Escribe un mensaje...">
+            <button><i class="fas fa-paper-plane"></i> Enviar</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Perfil -->
+      <section id="profile" class="content-section">
+        <h2>Perfil</h2>
+        <div class="profile-info">
+          <p><strong>Nombre:</strong> Maurice</p>
+          <p><strong>Email:</strong> maurice@example.com</p>
+          <p><strong>Rol:</strong> Administrador</p>
+          <button id="edit-profile-btn"><i class="fas fa-edit"></i> Editar Perfil</button>
+        </div>
+      </section>
+
+      <!-- Sección de Notificaciones -->
+      <section id="notifications" class="content-section">
+        <h2>Notificaciones</h2>
+        <div class="notification-list">
+          <div class="notification-card">
+            <p>Nueva tarea asignada: Organizar Reunión</p>
+          </div>
+          <div class="notification-card">
+            <p>Recordatorio: Reunión Mensual el 25/10/2023</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="dashboard.js"></script>
+</body>
+</html>
