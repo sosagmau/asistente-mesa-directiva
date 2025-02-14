@@ -1,0 +1,20 @@
+ECHO est� activado.
+# Ignorar node_modules
+node_modules/
+
+# Ignorar archivos de entorno
+.env
+
+# Ignorar archivos de base de datos local
+database.db
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar archivos generados por el sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas de compilación (si las tienes)
+dist/
+build/
